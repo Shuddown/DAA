@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import sys
 # Get the directory of the current file
@@ -11,6 +12,8 @@ sys.path.append(parent_dir)
 from utils.random_test import unique_rand
 import time
 
+=======
+>>>>>>> origin/master
 def binary_search_iterative(arr: list[int], key: int) -> int:
     left = 0
     right = len(arr) - 1
@@ -34,6 +37,7 @@ def binary_search_recursive(arr: list[int], key: int) -> int:
     right = len(arr) - 1
     mid = (left + right) // 2
     check_val = arr[mid]
+<<<<<<< HEAD
     if (key < check_val): return binary_search_recursive(arr[:mid], key)
     if (key > check_val): return binary_search_recursive(arr[mid+1:], key)
     return mid
@@ -48,3 +52,9 @@ if __name__ == "__main__":
     binary_search_recursive(unique_rand(n), 1)
     end_time = time.perf_counter()
     print(f"Recursive: {end_time - start_time}")
+=======
+    if (key < check_val): return binary_search_recursive(arr[:mid])
+    if (key > check_val): return binary_search_recursive(arr[mid+1:])
+    return mid
+
+>>>>>>> origin/master
