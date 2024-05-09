@@ -10,8 +10,4 @@ def most_frequent(string: str) -> list[str]:
 
 
 test = input("Give a string: ")
-<<<<<<< HEAD
 print(most_frequent(test))
-=======
-print(most_frequent(test))
->>>>>>> origin/master
