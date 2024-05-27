@@ -5,6 +5,9 @@ def unique_elements(arr: list[int]) -> list[int]:
         else: unique_elems[elem] = False
     return [elem for elem in unique_elems if (unique_elems[elem] == True)]
 
-
+if __name__ == "__main__":
+    text = input("Enter some space separated numbers: ")
+    nums = [int(num) for num in text.split()]
+    print(f"Unique nums: {unique_elements(nums)}")
 
     
