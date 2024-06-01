@@ -1,4 +1,5 @@
 def is_valid(expr):
+    
     l_count = r_count = 0
     for char in expr:
         if char == "(": l_count += 1

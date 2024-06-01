@@ -1,5 +1,6 @@
 
 def prim(graph):
+    
     n = len(graph)
     key = [float('inf')] * n
     parent = [-1] * n

@@ -1,4 +1,5 @@
 def extract_min(visited, dist, n):
+    
     min_dist = float('inf')
     min_index = -1
     for v in range(n):

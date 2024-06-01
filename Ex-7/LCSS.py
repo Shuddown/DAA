@@ -12,6 +12,7 @@ def lcs_recursive(X, Y, m = -1, n = -1):
     else:
         return max(lcs_recursive(X, Y, m, n-1), lcs_recursive(X, Y, m-1, n))
 
+
 def lcs(X, Y):
     m = len(X)
     n = len(Y)

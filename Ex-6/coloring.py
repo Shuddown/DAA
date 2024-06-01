@@ -1,4 +1,5 @@
 class Vertex:
+    
     def __init__(self, val, color = None):
         self.val = val
         self.color = color

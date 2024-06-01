@@ -1,4 +1,5 @@
 class Job:
+    
     def __init__(self, job_id, deadline, profit):
         self.job_id = job_id
         self.deadline = deadline
