@@ -20,7 +20,6 @@ def binary_search_iterative(arr: list[int], key: int) -> int:
         if (key < check_val): right = mid - 1
         elif (key > check_val): left = mid + 1
         else: return mid
-    
     return -1
 
 def binary_search_recursive(arr: list[int], key: int) -> int:
@@ -35,7 +34,9 @@ def binary_search_recursive(arr: list[int], key: int) -> int:
     mid = (left + right) // 2
     check_val = arr[mid]
     if (key < check_val): return binary_search_recursive(arr[:mid], key)
-    if (key > check_val): return binary_search_recursive(arr[mid+1:], key)
+    if (key > check_val):
+        result = binary_search_recursive(arr[mid+1:], key)
+        return -1 if result == -1 else result + mid + 1
     return mid
 
 if __name__ == "__main__":

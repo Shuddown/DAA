@@ -1,5 +1,4 @@
 def max_dac(arr: list[int]) -> int:
-    if len(arr) == 0: return None
     if len(arr) == 1: return arr[0]
     mid = len(arr)//2
     max_left = max_dac(arr[:mid])

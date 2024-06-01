@@ -1,22 +1,19 @@
-prev_pivot = 0 
 def lcs(arr: list[int]) -> int:
-    def largest_contiguous_sum(arr: list[int]):
-        if len(arr) == 0: return float('-inf')
-        if len(arr) == 1: return arr[0]
-        pivot = None
-        s = 0
-        for i in range(len(arr)):
-            if arr[i] < 0:
-                pivot = i
-                break
-            s += arr[i]
-        if pivot is None: return s
-        s_left = sum(arr[:pivot])
-        s_right = largest_contiguous_sum(arr[pivot + 1:])
-        global prev_pivot
-        max_val = max(s_left, s_right, s_left + sum(arr[pivot:prev_pivot]))
-        prev_pivot = pivot
-        return max_val
-    return largest_contiguous_sum(arr)
-L = [1,2,3,-4,5,-8]
+    if(len(arr) == 0): return -1
+    if(len(arr) == 1): return arr[0]
+    mid = len(arr)//2
+    max_left = lcs(arr[mid:])
+    max_right = lcs(arr[:mid])
+    max_mid = arr[0]
+    sum_t = 0
+    for num in arr:
+        sum_t += num
+        max_mid = max(max_mid, sum_t)
+        sum_t = max(sum_t, 0)
+    return max(max_left, max_right, max_mid)
+
+
+    
+    
+L = [-1,-2,-3,4,5,-6,-7,-8]
 print(lcs(L))
