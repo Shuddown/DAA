@@ -7,7 +7,7 @@ class Job:
 
 def job_scheduling(jobs, max_deadline):
     jobs.sort(key=lambda x: x.profit, reverse=True)
-    schedule = [-1] * max_deadline  # -1 indicates the slot is free
+    schedule = [-1] * max_deadline  
     total_profit = 0
 
     for job in jobs:

@@ -17,7 +17,7 @@ def editDistance(str1, str2):
                 dists[i][j] = 1 + min(dists[i][j - 1], dists[i - 1][j], dists[i - 1][j - 1])  
 
     return dists[m][n]
-str1 = "hollow"
-str2 = "holler"
+str1 = "intention"
+str2 = "execution"
 
 print(editDistance(str1, str2))
