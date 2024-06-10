@@ -21,5 +21,5 @@ def longest_palindromic_subsequence(s):
     d[s] = result
     return result
 
-s = "bbbab"
-print(longest_palindromic_subsequence(s))  # Output: 4
+s = input("Give a string: ")
+print("Longest palindromic substring: ", longest_palindromic_subsequence(s))  # Output: 4

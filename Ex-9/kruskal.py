@@ -42,7 +42,6 @@ def kruskal(graph):
 
     return mst
 
-# Example usage
 graph = [
     [0, 2, 0, 6, 0],
     [2, 0, 3, 8, 5],
@@ -50,4 +49,7 @@ graph = [
     [6, 8, 0, 0, 9],
     [0, 5, 7, 9, 0]
 ]
+print("Graph")
+print(graph)
 print("Kruskal's Algorithm: ", kruskal(graph))
+print("Total MST:", sum([edge[2] for edge in kruskal(graph)]))

@@ -15,5 +15,7 @@ graph = [
     [5,3,4,6],
     [3,9,2,float('inf')]
 ]
+print("Input: ")
 print(graph)
+print("Output: ")
 print(floyd_warshall(graph))

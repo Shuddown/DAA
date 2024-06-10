@@ -36,4 +36,7 @@ graph = [
     [6, 8, 0, 0, 9],
     [0, 5, 7, 9, 0]
 ]
+print("Graph")
+print(graph)
 print("Prim's Algorithm: ", prim(graph))
+print("Total MST:", sum([edge[2] for edge in prim(graph)]))

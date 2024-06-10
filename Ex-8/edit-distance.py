@@ -17,7 +17,7 @@ def editDistance(str1, str2):
                 dists[i][j] = 1 + min(dists[i][j - 1], dists[i - 1][j], dists[i - 1][j - 1])  
 
     return dists[m][n]
-str1 = "intention"
-str2 = "execution"
+str1 = input("Give a string: ") 
+str2 = input("Give another string: ")
 
-print(editDistance(str1, str2))
+print("Edit distance: ", editDistance(str1, str2))

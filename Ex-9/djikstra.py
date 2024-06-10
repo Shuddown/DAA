@@ -49,5 +49,9 @@ graph = [
 ]
 src = 0
 end = 4
+print("Input")
+print(graph)
+print("Start is 0, end is 4")
 prev = dijkstra(graph, src, end)
+print("Traversal")
 traverse(prev, end)

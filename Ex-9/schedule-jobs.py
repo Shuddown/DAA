@@ -4,6 +4,9 @@ class Job:
         self.job_id = job_id
         self.deadline = deadline
         self.profit = profit
+    
+    def __repr__(self) -> str:
+        return f"({self.job_id}, {self.deadline}, {self.profit})"
 
 def job_scheduling(jobs, max_deadline):
     jobs.sort(key=lambda x: x.profit, reverse=True)
@@ -28,6 +31,8 @@ jobs = [
     Job('e', 3, 15)
 ]
 
+print("Starting jobs: ")
+print(jobs)
 max_deadline = max(job.deadline for job in jobs)
 scheduled_jobs, total_profit = job_scheduling(jobs, max_deadline)
 print(f"Scheduled Jobs: {scheduled_jobs}")

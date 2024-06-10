@@ -52,9 +52,11 @@ def dynamic_knapsack(items: list[Item], W: int)-> int:
 if __name__ == "__main__":
     W = 4
     items = [Item(7, 3), Item(6,2)]
+    print(f"W: {W}")
+    print("Items", items)
     stolen = greedy_knapsack(items, W)
-    print(sum([item.v for item in stolen]))
-    print(dynamic_knapsack(items, W))
+    print("Greedy sol: ", sum([item.v for item in stolen]))
+    print("Dynamic sol: ", dynamic_knapsack(items, W))
     
     
     

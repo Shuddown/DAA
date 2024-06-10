@@ -21,12 +21,13 @@ def lcs(X,Y):
             if(Y[i] == X[j]): L[i+1][j+1] = min(L[i][j+1], L[i+1][j]) + 1
             else: L[i+1][j+1] = max(L[i][j+1], L[i+1][j])
     
+    print(L)
     return L[n][m]
 
 
 if __name__ == "__main__":
-    X = "AGGTAB"
-    Y = "GXTGAYB"
+    X = "ABAABA"
+    Y = "BABBAB"
     print(lcs_recursive(X,Y))
     print(lcs(X,Y))
             
