@@ -28,7 +28,6 @@ def solve_TSP(graph, start_vertex):
             bound += min_edge
         return bound
 
-    # Initial state
     initial_bound = calculate_initial_bound()
     initial_path = [start_vertex]
     initial_state = (initial_bound, 0, start_vertex, initial_path, set([start_vertex]))
@@ -42,7 +41,6 @@ def solve_TSP(graph, start_vertex):
             continue
 
         if len(current_path) == n:
-            # Complete the cycle
             final_cost = current_cost + graph[current_vertex][start_vertex]
             if final_cost < best_cost:
                 best_cost = final_cost
